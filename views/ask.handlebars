@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Hãy hỏi cộng đồng mạng một câu Đúng/Sai hoặc Có/Không</h1>
+    <form method="post" action="/api/question">
+        <div class="form-group">
+            <textarea id="question_tf" class="form-control" name="question" rows="6" maxlength="200"></textarea>
+            <p class="help-block">Còn <span id="text_counter">200</span>/200 ký tự</p>
+            <input class="btn btn-primary" type="submit" value="Gửi">
+        </div>
+    </form>
+</div>
+
+<script src="/ask.js"></script>

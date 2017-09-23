@@ -1,0 +1,33 @@
+textarea{
+    resize: vertical;
+}
+.questionResult{
+    font-size: 20px;
+    line-height: 2;
+    text-align: center;
+    display: inline-block;
+}
+#questionResultYes{
+    background-color: #1a32d0;
+}
+
+#questionResultNo{
+    background-color: #d90b01;
+}
+#questionResult{
+    margin-top: 30px;
+}
+
+#nextQuestion{
+    margin-top: 150px;
+}
+#question_text{
+    /*margin: 100px 20px 80px 50px;*/
+    margin-top: 100px ;
+    margin-bottom: 80px ;
+}
+
+#answer_choices {
+    /*display: inline-block;*/
+    margin-bottom: 80px;
+}

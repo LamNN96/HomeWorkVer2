@@ -1,0 +1,14 @@
+<h1 id="question_text" class="container text-center">{{{question.question}}}</h1>
+<h4 class="container text-center">Tổng số lượt vote: {{result.total}}</h4>
+<div id="questionResult" class="col-xs-12 questionResult" style="display: flex;">
+    <div id="questionResultNo" class="questionResult" {{{percentNoView}}}>{{{result.percentNo}}}
+        <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+    </div>
+    <div id="questionResultYes" class="questionResult" {{{percentYesView}}}>{{{result.percentYes}}}
+        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+    </div>
+</div>
+
+<form action="/" id="nextQuestion" class="text-center">
+    <button href="/" class="btn btn-lg btn-info">Câu tiếp theo</button>
+</form>

@@ -1,0 +1,43 @@
+<h1 id="question_text" class="container text-center">{{{question.question}}}</h1>
+<div class="container answer_choices" id="answer_choices">
+    <div class="row">
+        <form class="col-xs-6 text-center" id="formNo" method="post" action="/question/{{{question.id}}}">
+            <input type="hidden" name="answer" value="no">
+            <button type="submit" class="btn btn-lg btn-danger">
+                <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                Sai / Không
+            </button>
+        </form>
+        <form class="col-xs-6 text-center" id="formYes" method="post" action="/question/{{{question.id}}}">
+            <input type="hidden" name="answer" value="yes">
+            <button type="submit" class="btn btn-lg btn-primary">
+                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                Đúng / Có
+            </button>
+        </form>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-xs-6 text-right">
+        <form action="/question/result/{{{question.id}}}">
+            <button class="btn btn-lg btn-default">Kết quả vote</button>
+        </form>
+    </div>
+    <div class="col-xs-6 text-left">
+        <form action="/">
+            <button class="btn btn-lg btn-default">Câu hỏi khác</button>
+        </form>
+    </div>
+</div>
+<script>
+    //    $.ajax({
+    //        type: 'get',
+    //        url : '/api/question/'
+    //    }).done((data) => {
+    //        $('#question').html(data.question);
+    //        $('form').attr('action', '/api/question/' + data.id);
+    //    }).fail((err)=>{
+    //        console.error(err);
+    //    });
+</script>
