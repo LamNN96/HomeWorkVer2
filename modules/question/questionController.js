@@ -92,16 +92,7 @@ const answerQuestion = (id, answer) => {
             }
             ;
         }
-
     });
-
-
-    //saveQuestion(id, question);
-    //return id;
-    // } else {
-    // return null;
-    // }
-
 };
 
 const getRandomQuestion = (callback) => {

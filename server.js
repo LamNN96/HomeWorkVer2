@@ -14,7 +14,9 @@ app.set('view engine', 'handlebars');
 app.use('/', questionViewRouter);
 app.use('/api/question', questionApiRouter);
 
-
+app.get('/about', (res, req) =>{
+    res.render('/public/about.html');
+});
 app.use(express.static(__dirname + '/public'));
 
 mongoose.connect(config.connectionString, (err) =>{
@@ -25,6 +27,7 @@ mongoose.connect(config.connectionString, (err) =>{
     }
 } );
 
-app.listen(config.port , ()=>{
+let port = process.env.PORT || config.port;
+app.listen(port , ()=>{
     console.log('Sever ip up!');
 });
